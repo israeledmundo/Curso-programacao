@@ -1,0 +1,13 @@
+nome = str(input('Digite seu nome completo: ')).strip()
+nome1 = nome.upper()
+nome2 = nome.lower()
+nome3 = len(nome) - nome.count(' ')
+#nome4 = nome.find(' ')
+nome5 = nome.split()
+print ('Analisando seu nome...')
+print('Tudo maúsculo: {}'.format(nome1))
+print('Tudo minúsculo: {}'.format(nome2))
+print('Número de caracteres sem espaços: {}'.format(nome3))
+#print('O primeiro nome possui {} letras.'.format(nome4))
+print('O seu primeiro nome é {} e o número de letras é {}'.format(nome5[0], len(nome5[0])))
+
