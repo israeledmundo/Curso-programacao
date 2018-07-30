@@ -12,7 +12,10 @@ print('PROCESSANDO...')
 sleep(2)
 chances = 0
 while jogador != computador:
-    jogador = int(input('Você errou, tente outra vez: '))
+    if jogador < computador:
+        jogador = int(input('É MAIS...você errou, tente outra vez: '))
+    if jogador > computador:
+        jogador = int(input('É MENOS...você errou, tente outra vez: '))
     print('PROCESSANDO...')
     sleep(2)
     chances = chances+1
