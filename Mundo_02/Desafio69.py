@@ -20,8 +20,7 @@ while True:
         print("-" * 20)
         resp = str(input('Quer continuar? [S/N] ')).strip().upper()[0]
     if resp in 'N':
-        fim = 'FIM DO PROGRAMA'
-        print(f'{fim:=^40}')
+        print('{:=^40}'.format('FIM DO PROGRAMA'))
         break
 print(f'Total de pessoas com mais de 18 anos: {contI}')
 print(f'Ao todo temos {contH} homens cadastrados')
