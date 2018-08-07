@@ -3,18 +3,17 @@
 from random import randint
 print('=-' * 15)
 print('VAMOS JOGAR PAR OU IMPAR')
-
-
-cont = soma = 0
-computador = randint(0,10)
+cont = 0
 
 while True:
     print('=-' * 15)
     jogador = int(input('Diga um valor: '))
-    opcao = str(input('Par ou Ímpar? [P/I]')).upper().split()[0]
-    result = (jogador + computador) % 2
+    computador = randint(0, 10)
     soma = jogador + computador
-    cont = cont +1
+    opcao = ' '
+    while opcao not in 'PI':
+        opcao = str(input('Par ou Ímpar? [P/I]')).upper().split()[0]
+    result = (jogador + computador) % 2
     print('-' * 20)
     if result == 1:
         print(f'Você colocou {jogador} e o computador colocou {computador}. Total {soma}, DEU ÍMPAR!')
@@ -23,17 +22,16 @@ while True:
             print(f'GAME OVER! Você venceu {cont} vezes.')
             break
         elif opcao in 'Im':
-            print('Você GANHOU')
+            print('Você GANHOU\n'
+                  'Vamos jogar novamente...')
+            cont = cont + 1
     else:
         print(f'Você colocou {jogador} e o computador colocou {computador}. Total {soma}, DEU PAR!')
         if opcao in 'Pp':
-            print('Você GANHOU!!')
+            print('Você GANHOU!!\n'
+                  'Vamos jogar novamente...')
+            cont = cont + 1
         elif opcao in 'Im':
             print('Você PERDEU')
-            print('GAME OVER! Você venceu {cont} vezes.')
+            print(f'GAME OVER! Você venceu {cont} vezes.')
             break
-
-
-
-
-
